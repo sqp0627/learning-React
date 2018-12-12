@@ -30,7 +30,8 @@ const Header = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    focused: state.header.focused
+    // focused: state.get('header').get('focused') // 跟下面的写法等价
+    focused: state.getIn(['header', 'focused'])
   }
 };
 const mapDispatchToProps = (dispatch) => {
