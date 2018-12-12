@@ -31,7 +31,7 @@ class Header extends Component {
               <CSSTransition in={focused} timeout={300} classNames="slide">
                 <NavSearch onFocus={handleInputFocus} onBlur={handleInputBlur}></NavSearch>
               </CSSTransition>
-              <i className="iconfont">&#xe62b;</i>
+              <i className="iconfont zoom">&#xe62b;</i>
               {this.searchTrending()}
             </SearchWrapper>
           </Nav>
@@ -44,22 +44,27 @@ class Header extends Component {
   }
 
   searchTrending() {
-    const {focused, list} = this.props;
+    const {trendListShow, list, curPage, totalPage, handleMouseLeave, handlePageChange} = this.props;
+    const newList = list.toJS();  // list为immutable保护的对象，不能直接操作
+    const pageList = [];
+    for (let i = (curPage - 1) * 10; i < curPage * 10; i++) {
+      if (newList[i]) {
+        pageList.push(<SearchItem key={i}>{newList[i]}</SearchItem>);
+      }
+    }
 
-    if (focused) {
+    if (trendListShow) {
       return (
-          <HotSearch>
+          <HotSearch onMouseLeave={handleMouseLeave}>
             <HotSearchTitle>
               热门搜索
-              <SearchSwitch>换一批</SearchSwitch>
+              <SearchSwitch onClick={() => {
+                handlePageChange(curPage, totalPage, this.spinIcon)
+              }}><i ref={(icon) => {
+                this.spinIcon = icon
+              }} className="iconfont spin">&#xe851;</i>换一批</SearchSwitch>
             </HotSearchTitle>
-            <div>
-              {list.map((item, index) => {
-                return (
-                    <SearchItem key={index}>{item}</SearchItem>
-                )
-              })}
-            </div>
+            <div>{pageList}</div>
           </HotSearch>
       )
     } else {
@@ -72,7 +77,10 @@ const mapStateToProps = (state) => {
   return {
     // focused: state.get('header').get('focused') // 跟下面的写法等价
     focused: state.getIn(['header', 'focused']),
-    list: state.getIn(['header', 'list'])
+    trendListShow: state.getIn(['header', 'trendListShow']),
+    list: state.getIn(['header', 'list']),
+    curPage: state.getIn(['header', 'curPage']),
+    totalPage: state.getIn(['header', 'totalPage'])
   }
 };
 const mapDispatchToProps = (dispatch) => {
@@ -83,6 +91,27 @@ const mapDispatchToProps = (dispatch) => {
     },
     handleInputBlur() {
       dispatch(actionCreators.searchBlur());
+    },
+    handleMouseLeave() {
+      dispatch(actionCreators.mouseLeave());
+    },
+    handlePageChange(curPage, totalPage, spinIcon) {
+      // 图标旋转
+      let originAngle = spinIcon.style.transform.replace(/[^0-9]/g, '');
+      if (originAngle) {
+        originAngle = parseInt(originAngle, 10);
+      } else {
+        originAngle = 0;
+      }
+      spinIcon.style.transform = `rotate(${originAngle + 360}deg)`;
+
+      // 切换显示的数据
+      if (curPage < totalPage) {
+        curPage++;
+      } else {
+        curPage = 1;
+      }
+      dispatch(actionCreators.changePage(curPage))
     }
   }
 };

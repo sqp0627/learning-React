@@ -15,11 +15,20 @@ export const searchBlur = () => ({
   type: actionTypes.SEARCH_BLUR
 });
 
+export const mouseLeave = () => ({
+  type: actionTypes.MOUSE_LEAVE
+});
+
+export const changePage = (page) => ({
+  type: actionTypes.CHANGE_PAGE,
+  payload: page
+});
+
 export const getList = () => {
   return (dispatch) => {
    axios.get('/api/trending.json').then(res => {
      const data = res.data;
-     dispatch(changeList(data.data))
+     dispatch(changeList(data.data));
    }).catch(req => {
      console.log(req);
    })

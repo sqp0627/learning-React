@@ -50,7 +50,7 @@ export const SearchWrapper = styled.div`
   float: left;
   position: relative;
   
-  .iconfont{
+  .zoom{
     position: absolute;
     bottom: 6px;
     right: 5px;
@@ -61,7 +61,7 @@ export const SearchWrapper = styled.div`
     input{
       width: 240px;
     }
-    .iconfont{
+    .zoom{
       background: #777;
       color: #fff;
       border-radius: 13px;
@@ -120,8 +120,19 @@ export const HotSearchTitle = styled.div`
 
 export const SearchSwitch = styled.span`
   float: right;
-  font-size: 13px;
+  font-size: 12px;
   cursor: pointer;
+  &:hover{
+    color: #666;
+  }
+  .spin{
+    float: left;
+    margin-right: 3px;
+    /*图标旋转*/
+    transition: all .2s ease-in;
+    transform: rotate(0deg);
+    transform-origin: center center;
+  }
 `;
 
 export const SearchItem = styled.a`
