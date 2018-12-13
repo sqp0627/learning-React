@@ -1,16 +1,5 @@
 import React, {Component} from 'react'
-import {
-  HeaderWrapper,
-  Logo,
-  Nav,
-  NavItem,
-  NavSearch,
-  Addition,
-  Button,
-  SearchWrapper,
-  HotSearch,
-  HotSearchTitle, SearchSwitch, SearchItem
-} from "./style";
+import {HeaderWrapper, Logo, Nav, NavItem, NavSearch, Addition, Button, SearchWrapper, HotSearch, HotSearchTitle, SearchSwitch, SearchItem} from "./style";
 import {CSSTransition} from 'react-transition-group';
 import {connect} from "react-redux";
 import {actionCreators} from './store'
@@ -37,7 +26,7 @@ class Header extends Component {
           </Nav>
           <Addition>
             <Button className="reg">注册</Button>
-            <Button className="writing"><i className="iconfont">&#xe62c;</i>写文章</Button>
+            <Button className="writing"><i className="iconfont">&#xe615;</i>写文章</Button>
           </Addition>
         </HeaderWrapper>
     )

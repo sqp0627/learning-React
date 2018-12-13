@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "code": 200,
+  "data":[
+    {
+      "id": 1693015,
+      "slug": "b6ab59e782d6",
+      "title": "歌曲专题",
+      "avatar": "http://upload.jianshu.io/collections/images/1693015/%E4%B8%89%E8%A1%8C%E6%83%85%E4%B9%A6.png"
+    },
+    {
+      "id": 1693014,
+      "slug": "079706806739",
+      "title": "念诗专题",
+      "avatar": "http://upload.jianshu.io/collections/images/1693014/%E4%B8%89%E8%A1%8C%E6%83%85%E4%B9%A6.png"
+    },
+    {
+      "id": 1686183,
+      "slug": "7ecac177f5a8",
+      "title": "新人客栈",
+      "avatar": "http://upload.jianshu.io/collections/images/1686183/VCG21gic9793313.jpg"
+    },
+    {
+      "id": 1631270,
+      "slug": "349d7d11f9f4",
+      "title": "悬疑推理精选版",
+      "avatar": "http://upload.jianshu.io/collections/images/1631270/%E6%82%AC%E7%96%91%E6%8E%A8%E7%90%86%E7%B2%BE%E9%80%89%E7%89%88.jpg"
+    },
+    {
+      "id": 1628574,
+      "slug": "d61e8c3fddbc",
+      "title": "翻唱·音乐",
+      "avatar": "http://upload.jianshu.io/collections/images/1628574/willspirit-sbln-106481-unsplash.jpg"
+    },
+    {
+      "id": 1628248,
+      "slug": "accb04610749",
+      "title": "简书脱单",
+      "avatar": "http://upload.jianshu.io/collections/images/1628248/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180529152808.jpg"
+    },
+    {
+      "id": 1627017,
+      "slug": "a4aedc3f99de",
+      "title": "简书儿童文学之声",
+      "avatar": "http://upload.jianshu.io/collections/images/1627017/ferris-wheel.png"
+    }
+  ]
+}
