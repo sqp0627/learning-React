@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const HomeWrapper = styled.div`
-  margin: 0 auto;
+  margin: 58px auto 0 auto;
   width: 960px;
   overflow: hidden;
 `;
@@ -15,7 +15,7 @@ export const HomeLeft = styled.div`
 
 export const HomeRight = styled.div`
   float: right;
-  width: 240px;
+  width: 280px;
 `;
 
 export const TopicWrapper = styled.div`
@@ -78,4 +78,17 @@ export const ListInfo = styled.div`
     line-height: 24px;
     color: #999;
    }
+`;
+
+export const RecommendWrapper = styled.div`
+  margin: 30px 0;
+  width: 280px;
+`;
+
+export const RecommendItem = styled.div`
+  margin-bottom: 6px;
+  height: 50px;
+  width: 100%;
+  background: url(${(props) => props.imgUrl});
+  background-size: contain;
 `;

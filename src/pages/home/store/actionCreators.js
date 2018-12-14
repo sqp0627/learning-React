@@ -12,6 +12,11 @@ const articleList = (data) => ({
   payload: fromJS(data)
 });
 
+const recommendList = (data) => ({
+  type: actionTypes.GET_RECOMMEND_LIST,
+  payload: fromJS(data)
+});
+
 // export const searchFocus = () => ({
 //   type: actionTypes.SEARCH_FOCUS,
 // });
@@ -32,6 +37,17 @@ export const getArticleList = () => {
     axios.get('/api/article.json').then(res => {
       const data = res.data;
       dispatch(articleList(data.data));
+    }).catch(req => {
+      console.log(req);
+    })
+  }
+};
+
+export const getRecommendList = () => {
+  return (dispatch) => {
+    axios.get('/api/recommend.json').then(res => {
+      const data = res.data;
+      dispatch(recommendList(data.data));
     }).catch(req => {
       console.log(req);
     })
