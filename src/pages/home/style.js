@@ -92,3 +92,39 @@ export const RecommendItem = styled.div`
   background: url(${(props) => props.imgUrl});
   background-size: contain;
 `;
+
+export const WriterWrapper = styled.ul`
+  text-align: left;
+  list-style: none;
+`;
+
+export const WriterItem = styled.li`
+  margin-top: 15px;
+`;
+
+export const WriterAvatar = styled.img`
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+`;
+
+export const WriterDesc = styled.div`
+  display: inline-block;
+  vertical-align: top;
+`;
+
+export const WriterName = styled.p`
+  padding-top: 5px;
+  margin-right: 60px;
+  font-size: 14px;
+  color: #333;
+  line-height: 25px;
+`;
+
+export const WriterLikes = styled.p`
+  margin-top: 2px;
+  font-size: 12px;
+  color: #969696;
+  line-height: 20px;
+`;

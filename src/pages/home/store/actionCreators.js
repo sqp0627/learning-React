@@ -17,6 +17,11 @@ const recommendList = (data) => ({
   payload: fromJS(data)
 });
 
+const writerList = (data) => ({
+  type: actionTypes.GET_WRITER_LIST,
+  payload: fromJS(data)
+});
+
 // export const searchFocus = () => ({
 //   type: actionTypes.SEARCH_FOCUS,
 // });
@@ -48,6 +53,17 @@ export const getRecommendList = () => {
     axios.get('/api/recommend.json').then(res => {
       const data = res.data;
       dispatch(recommendList(data.data));
+    }).catch(req => {
+      console.log(req);
+    })
+  }
+};
+
+export const getWriterList = () => {
+  return (dispatch) => {
+    axios.get('/api/writer.json').then(res => {
+      const data = res.data;
+      dispatch(writerList(data.data));
     }).catch(req => {
       console.log(req);
     })

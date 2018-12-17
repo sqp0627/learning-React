@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "code": 200,
+  "data": [
+    {
+      "id": 12665193,
+      "slug": "757b5f9f910b",
+      "nickname": "宇文歡",
+      "avatar_source": "http://upload.jianshu.io/users/upload_avatars/12665193/828a449f-efbb-4540-b0af-f6c314810515.jpg",
+      "total_likes_count": 1936,
+      "total_wordage": 242982,
+      "is_following_user": false
+    },
+    {
+      "id": 5545154,
+      "slug": "898bb4ca481d",
+      "nickname": "徐林Grace",
+      "avatar_source": "http://upload.jianshu.io/users/upload_avatars/5545154/1a3d5ed6-9ad1-44b3-9457-3e6a29dd1b71.jpg",
+      "total_likes_count": 4785,
+      "total_wordage": 596096,
+      "is_following_user": false
+    },
+    {
+      "id": 8781442,
+      "slug": "2399ca214fbd",
+      "nickname": "胡七筒",
+      "avatar_source": "http://upload.jianshu.io/users/upload_avatars/8781442/79bf6acc-5dd3-49d1-9e2b-6c58066c1442.jpg",
+      "total_likes_count": 10085,
+      "total_wordage": 261066,
+      "is_following_user": false
+    },
+    {
+      "id": 6539412,
+      "slug": "62fc150bab96",
+      "nickname": "琪官Kafka",
+      "avatar_source": "http://upload.jianshu.io/users/upload_avatars/6539412/824c3d2f-b0d2-43a6-885a-d2acd37fd364.jpg",
+      "total_likes_count": 3819,
+      "total_wordage": 403030,
+      "is_following_user": false
+    },
+    {
+      "id": 2631077,
+      "slug": "90e981ba3d8d",
+      "nickname": "木清琳",
+      "avatar_source": "http://upload.jianshu.io/users/upload_avatars/2631077/dc99c361412c",
+      "total_likes_count": 2095,
+      "total_wordage": 211356,
+      "is_following_user": false
+    }
+  ]
+}
