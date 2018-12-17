@@ -27,6 +27,11 @@ const getMoreList = (list) => ({
   payload: fromJS(list)
 });
 
+export const changeScrollTopShow = (bol) => ({
+  type: actionTypes.CHANGE_SCROLL_TOP_SHOW,
+  payload: fromJS(bol)
+});
+
 export const getTopicList = () => {
   return (dispatch) => {
     axios.get('/api/topic.json').then(res => {

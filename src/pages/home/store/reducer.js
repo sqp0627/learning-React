@@ -25,7 +25,8 @@ const defaultState = fromJS({
     total_likes_count: null,
     total_wordage: null,
     is_following_user: false
-  }]
+  }],
+  showScroll: false
 });
 
 export default (state = defaultState, action) => {
@@ -40,7 +41,9 @@ export default (state = defaultState, action) => {
       return state.set('recommendList', action.payload);
     case actionTypes.GET_WRITER_LIST:
       return state.set('writerList', action.payload);
-    default:
+    case actionTypes.CHANGE_SCROLL_TOP_SHOW:
+      return state.set('showScroll', action.payload);
+      default:
       return state
   }
 }

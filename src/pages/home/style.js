@@ -140,3 +140,16 @@ export const WriterLikes = styled.p`
   color: #969696;
   line-height: 20px;
 `;
+
+export const BackTop = styled.div`
+  position: fixed;
+  right: 30px;
+  bottom:30px;
+  font-size: 14px;
+  width: 60px;
+  height: 60px;
+  line-height:60px;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 4px;
+`;
