@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
+import React, {PureComponent} from 'react'
 import {WriterAvatar, WriterItem, WriterWrapper, WriterDesc, WriterName, WriterLikes} from "../style";
 import {actionCreators} from '../store'
 import {connect} from "react-redux";
 
-class Writer extends Component {
+class Writer extends PureComponent {
   render() {
     const {list} = this.props;
 
