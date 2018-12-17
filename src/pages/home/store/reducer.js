@@ -34,6 +34,8 @@ export default (state = defaultState, action) => {
       return state.set('topicList', action.payload);
     case actionTypes.GET_ARTICLE_LIST:
       return state.set('articleList', action.payload);
+    case actionTypes.GET_MORE_ARTICLE_LIST:
+      return state.set('articleList', state.get('articleList').concat(action.payload));
     case actionTypes.GET_RECOMMEND_LIST:
       return state.set('recommendList', action.payload);
     case actionTypes.GET_WRITER_LIST:

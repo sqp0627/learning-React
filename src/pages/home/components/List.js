@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-import {ListItem, ListInfo} from "../style";
+import {ListItem, ListInfo, LoadMore} from "../style";
 import {actionCreators} from "../store";
 import {connect} from "react-redux";
 
 class List extends Component {
   render() {
-    const {list} = this.props;
+    const {list, getMore} = this.props;
     return (
         <div>
           {
@@ -19,6 +19,7 @@ class List extends Component {
               </ListItem>
             })
           }
+          <LoadMore onClick={getMore}>阅读更多</LoadMore>
         </div>
     )
   }
@@ -38,6 +39,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     getArticleList() {
       dispatch(actionCreators.getArticleList())
+    },
+    getMore() {
+      dispatch(actionCreators.getMoreArticleList())
     }
   }
 };

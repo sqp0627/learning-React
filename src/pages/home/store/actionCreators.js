@@ -22,9 +22,10 @@ const writerList = (data) => ({
   payload: fromJS(data)
 });
 
-// export const searchFocus = () => ({
-//   type: actionTypes.SEARCH_FOCUS,
-// });
+const getMoreList = (list) => ({
+  type: actionTypes.GET_MORE_ARTICLE_LIST,
+  payload: fromJS(list)
+});
 
 export const getTopicList = () => {
   return (dispatch) => {
@@ -42,6 +43,17 @@ export const getArticleList = () => {
     axios.get('/api/article.json').then(res => {
       const data = res.data;
       dispatch(articleList(data.data));
+    }).catch(req => {
+      console.log(req);
+    })
+  }
+};
+
+export const getMoreArticleList = () => {
+  return (dispatch) => {
+    axios.get('/api/article.json').then(res => {
+      const data = res.data;
+      dispatch(getMoreList(data.data));
     }).catch(req => {
       console.log(req);
     })

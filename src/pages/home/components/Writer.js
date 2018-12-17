@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {WriterAvatar, WriterItem, WriterWrapper, WriterDesc, WriterName, WriterLikes} from "../style";
-import * as actionCreators from "../store/actionCreators";
+import {actionCreators} from '../store'
 import {connect} from "react-redux";
 
 class Writer extends Component {
