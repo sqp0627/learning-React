@@ -12,10 +12,8 @@ export const HeaderWrapper = styled.div`
   z-index: 2;
 `;
 
-export const Logo = styled.a.attrs({
-  href: '/'
-})`
-  position:absolute;
+export const Logo = styled.a`
+  position: absolute;
   top: 0;
   left: 0;
   height: 58px;

@@ -3,6 +3,7 @@ import {HeaderWrapper, Logo, Nav, NavItem, NavSearch, Addition, Button, SearchWr
 import {CSSTransition} from 'react-transition-group';
 import {connect} from "react-redux";
 import {actionCreators} from './store'
+import {Link} from "react-router-dom";
 
 class Header extends PureComponent {
   render() {
@@ -10,7 +11,7 @@ class Header extends PureComponent {
 
     return (
         <HeaderWrapper>
-          <Logo></Logo>
+          <Link to={'/'}><Logo></Logo></Link>
           <Nav>
             <NavItem className="left active">首页</NavItem>
             <NavItem className="left">下载App</NavItem>
