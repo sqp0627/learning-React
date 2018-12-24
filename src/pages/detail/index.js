@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
-import {Content, DetailWrapper, Header} from "../home/style";
 import {connect} from "react-redux";
 import {actionCreators} from './store'
+import {Content, DetailWrapper, Header} from "./style";
 
 class Detail extends Component {
   render() {
     const {title, content} = this.props;
+
     return (
         <DetailWrapper>
           <Header>{title}</Header>
@@ -15,7 +16,9 @@ class Detail extends Component {
   }
 
   componentDidMount() {
-    this.props.getDetail();
+    // this.props.location 可以获取到'?id=1'
+    // this.props.match.params.id   路由参数id
+    this.props.getDetail(this.props.match.params.id);
   }
 }
 
@@ -25,8 +28,8 @@ const initMapStateToProps = (state) => ({
 });
 
 const initMapDispatchToProps = (dispatch) => ({
-  getDetail() {
-    dispatch(actionCreators.getDetail())
+  getDetail(id) {
+    dispatch(actionCreators.getDetail(id))
   }
 });
 
