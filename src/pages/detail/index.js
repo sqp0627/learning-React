@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {connect} from "react-redux";
 import {actionCreators} from './store'
 import {Content, DetailWrapper, Header} from "./style";
+import {withRouter} from 'react-router-dom'
 
 class Detail extends Component {
   render() {
@@ -33,4 +34,4 @@ const initMapDispatchToProps = (dispatch) => ({
   }
 });
 
-export default connect(initMapStateToProps, initMapDispatchToProps)(Detail);
+export default connect(initMapStateToProps, initMapDispatchToProps)(withRouter(Detail));
